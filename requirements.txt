@@ -1,0 +1,18 @@
+# Framework
+Flask==3.0.1
+
+# Data processing and analysis
+pandas==2.1.1
+numpy==1.26.2
+
+# Environment configuration
+python-dotenv==1.0.1
+
+# HTTP and API requests
+requests==2.32.3
+tweepy==4.14.0
+matplotlib==3.8.2
+
+# Utility tools
+Cython==0.29.36
+setuptools==70.0.0
