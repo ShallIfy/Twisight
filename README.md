@@ -28,4 +28,3 @@ Twisight is a Flask application that visualizes Twitter topics and helps you kee
 5. Open `http://localhost:5000` in your browser.
 
 Wallet addresses and point totals are stored under `account-list/`. Search results are saved within the `data/` directory.
-
