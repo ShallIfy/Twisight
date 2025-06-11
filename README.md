@@ -1,28 +1,31 @@
 # Twisight
 
-Twisight adalah aplikasi web untuk menganalisis topik yang sedang ramai diperbincangkan di Twitter. Proyek ini dibangun menggunakan Flask dan mengandalkan Tweepy untuk mengambil data tweet, lalu menampilkannya dalam bentuk grafik interaktif menggunakan Chart.js. Pengguna dapat melakukan pencarian, melihat popularitas suatu kata kunci, serta menyambungkan dompet Solana untuk mengumpulkan "Retro Point" tiap kali melakukan pencarian.
+Twisight is a Flask application that visualizes Twitter topics and helps you keep track of trending keywords. The app uses Tweepy to query the Twitter API and renders interactive charts with Chart.js. Users can connect a Phantom wallet and earn *Retro Points* each time they perform a search.
 
-## Fitur
+## Features
 
-- **Pencarian Tweet**: menampilkan jumlah tweet harian untuk kata kunci tertentu dan menyimpan datanya ke berkas CSV.
-- **Grafik Interaktif**: dukungan grafik line, bar, dan doughnut menggunakan Chart.js.
-- **Saran Pencarian**: menyediakan saran populer berdasarkan kata kunci yang sering dicari.
-- **Wallet Integration**: pengguna dapat menghubungkan dompet Phantom (Solana) untuk membuka fitur pencarian dan mengumpulkan Retro Point.
-- **Riwayat & Statistik**: riwayat pencarian dan statistik populer disimpan di `search_history.csv` dan `recent_searches.csv`.
+- **Tweet Search** - Fetches daily tweet counts for a keyword and stores the result as a CSV file under `data/`.
+- **Interactive Charts** - Line, bar and doughnut charts built with Chart.js for visualizing keyword performance.
+- **Search Suggestions** - Offers popular suggestions based on previous searches.
+- **Wallet Integration** - Connect a Solana Phantom wallet to unlock search capabilities and accumulate Retro Points.
+- **History and Statistics** - Keeps a log of searches in `search_history.csv` and counts the most recent searches in `recent_searches.csv`.
 
-## Instalasi
+## Installation
 
-1. Pastikan Python 3 telah terpasang.
-2. Instal dependensi dengan:
+1. Ensure Python 3 is installed.
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Buat berkas `.env` di direktori proyek dengan variabel `BEARER_TOKEN` berisi Twitter API bearer token Anda.
-4. Jalankan aplikasi:
+3. Create a `.env` file in the project root and define your Twitter bearer token:
+   ```
+   BEARER_TOKEN=<your token>
+   ```
+4. Run the application:
    ```bash
    python app.py
    ```
-5. Buka `http://localhost:5000` melalui peramban untuk menggunakan Twisight.
+5. Open `http://localhost:5000` in your browser.
 
-Data hasil pencarian akan tersimpan di folder `data/` dalam format CSV, sementara informasi dompet dan poin disimpan di `account-list/`.
+Wallet addresses and point totals are stored under `account-list/`. Search results are saved within the `data/` directory.
 
